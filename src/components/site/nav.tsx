@@ -6,7 +6,7 @@ const links = [
   { href: "#how", label: "Setup" },
 ];
 export function Wordmark({ className = "" }: { className?: string }) {
-  return <span className={`wordmark ${className}`}>FrontDesk<span className="wordmark-period">.</span></span>;
+  return <span className={`wordmark brand-lockup ${className}`}><img src="/frontdesk-logo.png" alt="" width="44" height="44" className="brand-symbol" /><span>FrontDesk<span className="wordmark-period">.</span></span></span>;
 }
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);

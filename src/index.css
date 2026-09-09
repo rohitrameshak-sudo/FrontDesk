@@ -351,6 +351,8 @@ details[open] summary > svg { transform:rotate(45deg); }
   .primary-action,.hero-scroll,.site-nav { transition:none; }
 }
 
+.brand-lockup{display:inline-flex;align-items:center;gap:9px}
+.brand-symbol{display:block;width:44px;height:44px;object-fit:cover;border-radius:12px;flex-shrink:0}
 /* Invoice and connected maintenance examples */
 .invoice-attachment{display:flex;align-items:center;gap:14px;border:1px solid #dcdfe5;border-radius:8px;padding:15px;margin:18px 0;color:#30374b;background:#fafaf8}
 .invoice-attachment strong{font-size:14px}.invoice-attachment span{display:block;font-size:12px;margin-top:4px;color:#737b8b}
