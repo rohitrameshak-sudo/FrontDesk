@@ -17,7 +17,7 @@ export function Collections() {
       <div className="frame">
         <div className="collection-intro">
           <h2>The payment is<br /><em>the update.</em></h2>
-          <p>FrontDesk sends what’s owed. Your tenant pays through a connected collection service. The payment is matched and the ledger updates automatically.</p>
+          <p>Automated rent collection software for property owners in India. FrontDesk sends what’s owed, matches the tenant’s payment through a connected collection service, and updates the ledger automatically.</p>
         </div>
         <div className="demo-toolbar"><span><span className="live-dot" /> Explore the collection flow</span><span>Interactive demo · Sample data</span></div>
         <div className="collection-stage">
