@@ -25,7 +25,7 @@ export function AssistantShowcase() {
           <span className="section-note">THE PERSONAL ASSISTANT</span>
           <h2>Your books.<br /><em>Just ask.</em></h2>
           <p>Invoices are generated from each tenant’s balance and delivered as PDFs in chat. Tenants can ask for another copy. Owners can send one to a tenant or request it for themselves.</p>
-          <a href={enquiryLink("The property assistant")} className="text-link">Explore your assistant with Rohit <ArrowUpRight size={17} /></a>
+          <a href={enquiryLink()} className="text-link">Explore your assistant with Rohit <ArrowUpRight size={17} /></a>
         </div>
         <div className="assistant-console">
           <div className="console-switch" role="group" aria-label="Choose an assistant example">

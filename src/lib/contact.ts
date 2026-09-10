@@ -1,5 +1,4 @@
 export const BUSINESS_EMAIL = "rohit@get-front-desk.com";
-export function enquiryLink(topic = "A FrontDesk walkthrough") {
-  const body = `Hi Rohit,\n\nI'd like to learn about ${topic.toLowerCase()} for my properties.\n\nProperty type:\nNumber of units:\nWhat I'd like help with:\n\nMy name:\nPreferred time to connect:\n`;
-  return `mailto:${BUSINESS_EMAIL}?subject=${encodeURIComponent(topic)}&body=${encodeURIComponent(body)}`;
-}
+export const MAIL_LINK = `mailto:${BUSINESS_EMAIL}?subject=FrontDesk%20enquiry&body=${encodeURIComponent("Hey, I'd love to know more about FrontDesk.")}`;
+export const WHATSAPP_LINK = "https://wa.me/918660569516?text=Hey,%20i'd%20love%20to%20know%20more%20about%20FrontDesk";
+export function enquiryLink() { return "#contact-options"; }
