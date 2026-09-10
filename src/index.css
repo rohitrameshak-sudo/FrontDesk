@@ -351,6 +351,7 @@ details[open] summary > svg { transform:rotate(45deg); }
   .primary-action,.hero-scroll,.site-nav { transition:none; }
 }
 
+.contact-intro h3{font-size:26px;line-height:1.2;letter-spacing:-.025em;max-width:360px;margin-bottom:18px}.contact-intro p{font-size:16px;line-height:1.7;color:#626c82;max-width:390px;margin-bottom:24px}.contact-intro>a{font-size:16px;text-decoration:underline;text-underline-offset:5px;overflow-wrap:anywhere}.contact-card{min-width:0}.contact-label{font-size:15px;margin-bottom:16px}.contact-topics{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:24px}.contact-topics button{font-size:14px;padding:12px 16px;border:1px solid #c9cfdb;border-radius:24px;text-align:left}.contact-topics button[aria-pressed=true]{background:#30374b;color:white;border-color:#30374b}.contact-send{display:inline-flex}.contact-note{font-size:13px;color:#626c82;line-height:1.5;margin-top:12px}.contact-copy{font-size:14px;text-decoration:underline;text-underline-offset:4px;margin-top:18px}.contact-status{display:block;min-height:24px;font-size:13px;margin-top:8px;overflow-wrap:anywhere}
 .brand-lockup{display:inline-flex;align-items:center;gap:9px}
 .brand-symbol{display:block;width:44px;height:44px;object-fit:cover;border-radius:12px;flex-shrink:0}
 /* Invoice and connected maintenance examples */

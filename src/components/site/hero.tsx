@@ -1,5 +1,6 @@
 import { Suspense, lazy, useEffect, useRef, useState } from "react";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { enquiryLink } from "@/lib/contact";
 const GLSLHills = lazy(() => import("@/components/ui/glsl-hills").then(m => ({ default: m.GLSLHills })));
 
 export function Hero() {
@@ -33,7 +34,7 @@ export function Hero() {
         <div className="hero-support">
           <p className="hero-description fd-rise">Automatic rent collection and reconciliation.<br className="hidden sm:block" /> An assistant for everything else.</p>
           <div className="hero-actions">
-            <a href="#contact" className="primary-action">Discuss your setup <ArrowUpRight size={16} /></a>
+            <a href={enquiryLink()} className="primary-action">Get a personal walkthrough <ArrowUpRight size={16} /></a>
             <a href="#collections" className="secondary-action">See it happen <ArrowDown size={16} /></a>
           </div>
         </div>

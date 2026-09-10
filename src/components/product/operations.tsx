@@ -1,4 +1,5 @@
 import { Plus } from "lucide-react";
+import { enquiryLink } from "@/lib/contact";
 export function Operations() {
   return (
     <section className="operations-section" id="operations">
@@ -21,7 +22,7 @@ export function Setup() {
   return (
     <section id="how" className="setup-section frame">
       <div className="setup-heading"><span className="section-note">IMPLEMENTED FOR YOUR BUSINESS</span><h2>Your properties.<br /><em>Your collection setup.</em></h2></div>
-      <div className="setup-copy"><p>We bring across your opening balances, connect a suitable payment provider, and set up the owner and tenant assistants around your workflow.</p><p className="setup-secondary">Provider availability and account eligibility are confirmed during setup. Already collecting elsewhere? Start with the ledger and assistant.</p><a href="#contact" className="text-link">Talk through your setup <span aria-hidden="true">↗</span></a></div>
+      <div className="setup-copy"><p>We bring across your opening balances, connect a suitable payment provider, and set up the owner and tenant assistants around your workflow.</p><p className="setup-secondary">Provider availability and account eligibility are confirmed during setup. Already collecting elsewhere? Start with the ledger and assistant.</p><a href={enquiryLink("Automatic rent collection")} className="text-link">Plan your setup with Rohit <span aria-hidden="true">↗</span></a></div>
     </section>
   );
 }
