@@ -1,5 +1,5 @@
 import { Suspense, lazy, useEffect, useRef, useState } from "react";
-import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { ArrowDown, ArrowUpRight, CheckCheck } from "lucide-react";
 import { enquiryLink } from "@/lib/contact";
 const GLSLHills = lazy(() => import("@/components/ui/glsl-hills").then(m => ({ default: m.GLSLHills })));
 
@@ -30,6 +30,10 @@ export function Hero() {
         <Suspense fallback={null}><GLSLHills width="100%" height="100%" speed={0.25} /></Suspense>
       </div>
       <div className="hero-content frame">
+        <a href="#collections" className="hero-receipt fd-rise" aria-label="See how a tenant payment updates the ledger">
+          <img src="/frontdesk-logo.png" alt="" width="40" height="40" />
+          <span><span className="receipt-heading">Payment received <span>Just now</span></span><strong>₹42,000 <span>· Priya Menon, A-104</span></strong><span className="receipt-status"><CheckCheck size={14} /> Matched. Ledger updated.</span></span>
+        </a>
         <h1 className="hero-title fd-rise"><span className="hero-title-soft">Rent paid.</span><br />Books done.</h1>
         <div className="hero-support">
           <p className="hero-description fd-rise">Automatic rent collection and reconciliation.<br className="hidden sm:block" /> An assistant for everything else.</p>
