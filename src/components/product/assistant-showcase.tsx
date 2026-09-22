@@ -6,6 +6,7 @@ const prompts = [
   { question: "Kadam & Sons paid ₹38,000 by cheque.", answer: "₹38,000 has been added to Kadam & Sons’ ledger for Shop 02, dated 9 September 2026. The payment method is recorded as cheque.", source: "Shop 02 · Ledger updated", invoice: false },
   { question: "Send Nair his invoice.", answer: "R. Nair’s invoice is ready to send to him, with ₹24,500 outstanding. Here’s the PDF for your review.", source: "B-203 · Send to tenant", invoice: true },
   { question: "Send me Nair’s invoice.", answer: "Here’s R. Nair’s invoice for B-203. The balance due is ₹24,500.", source: "B-203 · Requested by owner", invoice: true },
+  { question: "When is the plumber coming to B-203?", answer: "I called Suresh, your plumbing contractor, about the leaking kitchen tap in B-203. He confirmed a visit for 23 September, between 10 and 11 AM. R. Nair has confirmed he’ll be home to let him in.", source: "Upcoming visit · 23 September 2026 · 10–11 AM", invoice: false },
 ];
 const tenantPrompts = [
   { question: "What’s my balance?", answer: "Your outstanding balance is ₹24,500 for B-203. Your invoice includes the charges and payments recorded in your ledger.", source: "B-203 · Your account", invoice: false },
