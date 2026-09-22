@@ -59,7 +59,7 @@ export function GLSLHills({ width = "100vw", height = "100vh", cameraZ = 125, pl
     });
     // An open central avenue keeps the headline clear. No windows or signage.
     for (const side of [-1, 1]) {
-      for (let row = 0; row < 6; row++) {
+      for (let row = 0; row < 12; row++) {
         for (let lane = 0; lane < 3; lane++) {
           const seed = row * 7 + lane * 3 + (side === 1 ? 2 : 0);
           const h = 15 + lane * 10 + ((seed * 13) % 21);
@@ -68,6 +68,7 @@ export function GLSLHills({ width = "100vw", height = "100vh", cameraZ = 125, pl
           geometries.push(geometry, edges);
           const building = new THREE.Mesh(geometry, material);
           building.position.set(side * (33 + lane * 28 + (row % 2) * 3), h / 2 - 5, 40 - row * 34 - lane * 8);
+          building.userData.startZ = building.position.z;
           building.add(new THREE.LineSegments(edges, edgeMaterial));
           buildings.add(building);
         }
@@ -94,6 +95,15 @@ export function GLSLHills({ width = "100vw", height = "100vh", cameraZ = 125, pl
         travel = THREE.MathUtils.damp(travel, target, 7, delta);
       } else { travel = 0; }
       const drift = motion.matches ? 0 : Math.sin(elapsed * 0.18) * 1.2;
+      // Match the hills' continuous forward flow. Recycle blocks behind the
+      // camera into the distant haze, where the wrap cannot be seen.
+      const span = 12 * 34;
+      const near = (cameraZ + 40) / buildings.scale.z;
+      for (const building of buildings.children) {
+        const startZ = building.userData.startZ as number;
+        building.position.z = motion.matches ? startZ
+          : near - THREE.MathUtils.euclideanModulo(near - startZ - elapsed * 30, span);
+      }
       camera.position.set(travel * 10 + drift, 16 + travel * 34, cameraZ - travel * 66);
       camera.lookAt(-travel * 6, 28 - travel * 14, -travel * 32);
       renderer.render(scene, camera);
